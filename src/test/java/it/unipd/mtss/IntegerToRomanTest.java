@@ -6,6 +6,7 @@
 package it.unipd.mtss;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class IntegerToRomanTest {
@@ -13,5 +14,15 @@ public class IntegerToRomanTest {
     public void test_IllegalArgumentException() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(1001));
+    }
+    
+    @Test
+    public void testMethod_Convert() {
+        IntegerToRoman ir = new IntegerToRoman();
+        String roman = ir.convert(1);
+
+        assertEquals("I", roman);
+        assertEquals("II", IntegerToRoman.convert(2));
+        assertEquals("III", IntegerToRoman.convert(3));
     }
 }
