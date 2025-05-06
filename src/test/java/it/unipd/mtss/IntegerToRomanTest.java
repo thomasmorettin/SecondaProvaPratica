@@ -30,5 +30,8 @@ public class IntegerToRomanTest {
 	assertEquals("VII", IntegerToRoman.convert(7));
         assertEquals("IX", IntegerToRoman.convert(9));
         assertEquals("X", IntegerToRoman.convert(10));
+	assertEquals("XV", IntegerToRoman.convert(15));
+        assertEquals("XIX", IntegerToRoman.convert(19));
+        assertEquals("XX", IntegerToRoman.convert(20));
     }
 }
